@@ -4,14 +4,14 @@
 
 **Version:** 1.2
 
-**Date:** [Insert Date]
+**Date:** 1 Jan 2025
 
-**Prepared By:** [Your Name]
+**Prepared By:** Ari Munandar
 
 ---
 
 ### **1. Executive Summary**
-The backend for the Personal Financial Planner MVP will be developed using FastAPI to handle API requests and process inputs (image optional, text required). CrewAI will be integrated to manage the AI Agent for conversational interactions, and Google Gemini API will be utilized for advanced AI capabilities such as predictive analytics and financial insights. Supabase will serve as the database solution to store all user data, ensuring seamless integration and efficient data retrieval.
+The backend for the Personal Financial Planner MVP will be developed using FastAPI to handle API requests and process inputs (image optional, text required). CrewAI will be integrated to manage the AI Agent for conversational interactions, and Google Gemini API will be utilized for advanced AI capabilities such as predictive analytics and financial insights. Supabase will serve as the database solution to store all user data, ensuring seamless integration and efficient data retrieval. Local development will utilize conda for environment management.
 
 ---
 
@@ -162,7 +162,7 @@ The backend for the Personal Financial Planner MVP will be developed using FastA
   - For caching and session management.
 
 #### **2. Local Development Environment**
-- Develop and test locally using a macOS environment.
+- Develop and test locally using a macOS environment with conda for environment management.
 - Use Docker containers for isolating dependencies and runtime environments.
 - Utilize FastAPI’s built-in development server for testing endpoints.
 - Use Supabase CLI for local database management.
@@ -185,7 +185,7 @@ The backend for the Personal Financial Planner MVP will be developed using FastA
 
 ### **8. Risks & Mitigations**
 #### **Risk:** Dependency conflicts during local development.
-- **Mitigation:** Use virtual environments and Docker to isolate dependencies.
+- **Mitigation:** Use conda for environment isolation and dependency management.
 #### **Risk:** Data loss during local testing.
 - **Mitigation:** Regular backups of the Supabase database.
 #### **Risk:** Performance bottlenecks in local testing.
@@ -214,6 +214,7 @@ The backend for the Personal Financial Planner MVP will be developed using FastA
   - Postman for API testing.
   - Docker for local containerization.
   - Supabase CLI for database management.
+  - Conda for environment management.
 
 ---
 
@@ -223,3 +224,4 @@ The backend for the Personal Financial Planner MVP will be developed using FastA
 - **Database Schema Diagrams:** Visual representation of data models.
 
 ---
+
