@@ -1,0 +1,225 @@
+**Product Requirements Document (PRD)**
+
+**Project Title:** Personal Financial Planner MVP - Backend
+
+**Version:** 1.2
+
+**Date:** [Insert Date]
+
+**Prepared By:** [Your Name]
+
+---
+
+### **1. Executive Summary**
+The backend for the Personal Financial Planner MVP will be developed using FastAPI to handle API requests and process inputs (image optional, text required). CrewAI will be integrated to manage the AI Agent for conversational interactions, and Google Gemini API will be utilized for advanced AI capabilities such as predictive analytics and financial insights. Supabase will serve as the database solution to store all user data, ensuring seamless integration and efficient data retrieval.
+
+---
+
+### **2. Objectives**
+- Build a scalable, secure, and efficient backend architecture to support the MVP features.
+- Enable seamless integration with CrewAI and Google Gemini APIs for AI-driven functionalities.
+- Provide endpoints for input processing (image optional, text required) and return actionable insights to the frontend.
+- Leverage Supabase for user data storage and management.
+
+---
+
+### **3. Key Features**
+#### **1. Input Handling**
+- Accept a single input through a unified FastAPI endpoint that supports text (required) and an optional image.
+- Process inputs for downstream AI workflows.
+
+#### **2. AI Integration**
+- **CrewAI:**
+  - Manage conversational AI interactions.
+  - Handle user queries related to budgets, expenses, and goals.
+- **Google Gemini API:**
+  - Provide predictive analytics for expenses and income.
+  - Generate financial insights based on user data and goals.
+
+#### **3. Budgeting API**
+- Store and retrieve user’s income, expenses, and budget data in Supabase.
+- Categorize and summarize spending patterns.
+
+#### **4. Goal Management API**
+- Enable CRUD operations (Create, Read, Update, Delete) for user financial goals in Supabase.
+- Track and update goal progress in real-time.
+
+#### **5. Insights and Notifications**
+- Generate and deliver actionable insights based on user data and AI predictions.
+- Push alerts for overspending, savings opportunities, and milestone achievements.
+
+#### **6. Security and Authentication**
+- Use OAuth2 for secure user authentication.
+- Implement role-based access control for admin and user functions.
+- Ensure data encryption in transit and at rest.
+
+---
+
+### **4. API Endpoints**
+#### **1. Input Processing**
+- **POST /api/input**
+  - Accepts JSON payload with:
+    - `text` (string, required): The user’s financial query or input text.
+    - `image` (file, optional): An optional image file for additional context.
+  - Processes the input and returns actionable insights derived from the provided data.
+
+#### **2. User Profile Management**
+- **GET /api/user/{user_id}**
+  - Retrieves user profile data from Supabase.
+- **POST /api/user**
+  - Creates a new user profile in Supabase.
+- **PUT /api/user/{user_id}**
+  - Updates user profile information in Supabase.
+- **DELETE /api/user/{user_id}**
+  - Deletes user profile from Supabase.
+
+#### **3. Budget Management**
+- **GET /api/budget/{user_id}**
+  - Retrieves the user’s budget and expense data from Supabase.
+- **POST /api/budget**
+  - Creates or updates budget details for a user in Supabase.
+- **DELETE /api/budget/{budget_id}**
+  - Deletes a specific budget entry from Supabase.
+
+#### **4. Goal Management**
+- **GET /api/goals/{user_id}**
+  - Retrieves all goals for a user from Supabase.
+- **POST /api/goals**
+  - Creates a new financial goal in Supabase.
+- **PUT /api/goals/{goal_id}**
+  - Updates an existing goal in Supabase.
+- **DELETE /api/goals/{goal_id}**
+  - Deletes a specific goal from Supabase.
+
+#### **5. Insights and Notifications**
+- **GET /api/insights/{user_id}**
+  - Fetches AI-generated insights for the user.
+- **POST /api/notifications**
+  - Pushes notifications to the user.
+
+---
+
+### **5. Data Models**
+#### **User Model:**
+```json
+{
+  "user_id": "string",
+  "name": "string",
+  "email": "string",
+  "income": "float",
+  "expenses": "float",
+  "savings": "float"
+}
+```
+
+#### **Budget Model:**
+```json
+{
+  "budget_id": "string",
+  "user_id": "string",
+  "category": "string",
+  "amount": "float",
+  "date": "string"
+}
+```
+
+#### **Goal Model:**
+```json
+{
+  "goal_id": "string",
+  "user_id": "string",
+  "name": "string",
+  "target_amount": "float",
+  "current_amount": "float",
+  "deadline": "string"
+}
+```
+
+#### **Insights Model:**
+```json
+{
+  "insight_id": "string",
+  "user_id": "string",
+  "type": "string",
+  "message": "string",
+  "created_at": "string"
+}
+```
+
+---
+
+### **6. Technical Requirements**
+#### **1. Frameworks and Tools**
+- **FastAPI:**
+  - For building and managing API endpoints.
+- **CrewAI:**
+  - For conversational AI and query handling.
+- **Google Gemini API:**
+  - For predictive analytics and financial insights.
+- **Supabase:**
+  - For database management and user data storage.
+- **Redis:**
+  - For caching and session management.
+
+#### **2. Local Development Environment**
+- Develop and test locally using a macOS environment.
+- Use Docker containers for isolating dependencies and runtime environments.
+- Utilize FastAPI’s built-in development server for testing endpoints.
+- Use Supabase CLI for local database management.
+
+#### **3. Security**
+- Encrypt sensitive data using AES-256.
+- Ensure regular updates to dependencies to avoid vulnerabilities.
+
+---
+
+### **7. Success Metrics**
+- **Performance:**
+  - API response time < 200ms for 95% of requests.
+- **Reliability:**
+  - Local development reliability ensured through comprehensive unit and integration tests.
+- **Security:**
+  - Zero critical vulnerabilities during local development.
+
+---
+
+### **8. Risks & Mitigations**
+#### **Risk:** Dependency conflicts during local development.
+- **Mitigation:** Use virtual environments and Docker to isolate dependencies.
+#### **Risk:** Data loss during local testing.
+- **Mitigation:** Regular backups of the Supabase database.
+#### **Risk:** Performance bottlenecks in local testing.
+- **Mitigation:** Optimize queries and perform load testing on the local setup.
+
+---
+
+### **9. Timeline**
+#### **Phase 1: Architecture Design (1 Week)**
+- Finalize API contracts and database schema.
+
+#### **Phase 2: Development (4 Weeks)**
+- Implement API endpoints.
+- Integrate CrewAI, Google Gemini APIs, and Supabase.
+
+#### **Phase 3: Testing (2 Weeks)**
+- Conduct unit and integration testing locally.
+
+---
+
+### **10. Resources Required**
+- **Team:**
+  - 1 Backend Developer
+  - 1 AI Specialist (CrewAI and Google Gemini integration)
+- **Tools:**
+  - Postman for API testing.
+  - Docker for local containerization.
+  - Supabase CLI for database management.
+
+---
+
+### **11. Appendices**
+- **API Documentation:** Detailed contracts for each endpoint.
+- **Integration Guides:** CrewAI, Google Gemini API, and Supabase references.
+- **Database Schema Diagrams:** Visual representation of data models.
+
+---
