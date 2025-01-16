@@ -1,0 +1,31 @@
+merchant_id,merchant_name,merchant_type,product_id,product_name,price,unit,category
+m001,Warung Pak Slamet,Warung Makan,p001,Nasi Goreng,15000,porsi,Makanan Utama
+m001,Warung Pak Slamet,Warung Makan,p002,Gado-gado,12000,porsi,Makanan Utama
+m001,Warung Pak Slamet,Warung Makan,p003,Es Teh Manis,3000,gelas,Minuman
+m001,Warung Pak Slamet,Warung Makan,p004,Mie Goreng,14000,porsi,Makanan Utama
+m001,Warung Pak Slamet,Warung Makan,p005,Soto Ayam,13000,porsi,Makanan Utama
+m001,Warung Pak Slamet,Warung Makan,p006,Es Jeruk,4000,gelas,Minuman
+m001,Warung Pak Slamet,Warung Makan,p007,Nasi Uduk,10000,porsi,Makanan Utama
+m001,Warung Pak Slamet,Warung Makan,p008,Sate Ayam,15000,porsi,Makanan Utama
+m001,Warung Pak Slamet,Warung Makan,p009,Es Campur,8000,gelas,Minuman
+m001,Warung Pak Slamet,Warung Makan,p010,Nasi Putih,5000,porsi,Makanan Utama
+m002,Toko Roti Makmur,Toko Roti,p001,Roti Tawar,12000,bungkus,Roti
+m002,Toko Roti Makmur,Toko Roti,p002,Bakwan Jagung,2000,buah,Gorengan
+m002,Toko Roti Makmur,Toko Roti,p003,Pisang Goreng,2500,buah,Gorengan
+m002,Toko Roti Makmur,Toko Roti,p004,Roti Coklat,5000,buah,Roti
+m002,Toko Roti Makmur,Toko Roti,p005,Roti Keju,6000,buah,Roti
+m002,Toko Roti Makmur,Toko Roti,p006,Donat,3500,buah,Roti
+m002,Toko Roti Makmur,Toko Roti,p007,Croissant,8000,buah,Roti
+m002,Toko Roti Makmur,Toko Roti,p008,Tahu Goreng,1500,buah,Gorengan
+m002,Toko Roti Makmur,Toko Roti,p009,Tempe Goreng,1500,buah,Gorengan
+m002,Toko Roti Makmur,Toko Roti,p010,Roti Sosis,7000,buah,Roti
+m003,Rumah Makan Padang Minang,Rumah Makan,p001,Rendang Sapi,25000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p002,Nasi Uduk,8000,porsi,Nasi
+m003,Rumah Makan Padang Minang,Rumah Makan,p003,Sate Ayam,20000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p004,Gulai Ayam,18000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p005,Dendeng Balado,22000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p006,Telur Dadar Padang,8000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p007,Ayam Pop,20000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p008,Gulai Ikan,23000,porsi,Lauk Pauk
+m003,Rumah Makan Padang Minang,Rumah Makan,p009,Sambal Hijau,5000,porsi,Sambal
+m003,Rumah Makan Padang Minang,Rumah Makan,p010,Es Teh Tawar,3000,gelas,Minuman
